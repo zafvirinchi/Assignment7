@@ -1,0 +1,14 @@
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      properties:
+        spring.json.trusted.packages: "com.tcs.order.orderservice.entity.Order"
+      group-id: myGroup
+    producer:
+      properties:
+        spring:
+          json:
+            add:
+              type:
+                headers: false
